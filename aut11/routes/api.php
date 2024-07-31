@@ -6,3 +6,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
+
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout']);
+
+Route::middleware(['auth:sanctum', 'role:0'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'index']);
+    // Other admin routes
+});
+
+Route::middleware(['auth:sanctum', 'role:1'])->group(function () {
+    Route::get('/user', [UserController::class, 'index']);
+    // Other user routes
+});

@@ -14,6 +14,15 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->statefulApi();
     })
+
+    /* ->routeMiddleware([
+        'auth' => \App\Http\Middleware\Authenticate::class,
+        'role' => \App\Http\Middleware\CheckRole::class,
+    ]) */
+    
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
+
+    
+    
