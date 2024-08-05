@@ -1,0 +1,93 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "aut11",
+    "collectionId": "2942ce02-b445-460f-84cd-c9ac3c863e43",
+    "dateExported": "2024-08-05T13:52:33.525Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "344737d6-0419-4db8-bbd3-ca42c903cf02",
+            "colId": "2942ce02-b445-460f-84cd-c9ac3c863e43",
+            "containerId": "",
+            "name": "loginpost admin",
+            "url": "api/admin",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-08-01T20:52:58.118Z",
+            "modified": "2024-08-05T13:33:02.607Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "4|8sJ1wpuXRLrSZR4Qfwf76QNge0suyrQ9zVnRs5we3cce7ef3"
+            }
+        },
+        {
+            "_id": "6dc1ce91-146f-4825-95db-36d05de87665",
+            "colId": "2942ce02-b445-460f-84cd-c9ac3c863e43",
+            "containerId": "",
+            "name": "loginuser",
+            "url": "api/login?email=test@example.com&password=abc123",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-08-01T21:10:13.835Z",
+            "modified": "2024-08-05T13:26:15.118Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "email",
+                    "value": "test@example.com",
+                    "isPath": false
+                },
+                {
+                    "name": "password",
+                    "value": "abc123",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "cebce5e1-d8bb-459e-8c20-e78270419dbe",
+            "colId": "2942ce02-b445-460f-84cd-c9ac3c863e43",
+            "containerId": "",
+            "name": "loginpost user",
+            "url": "api/user",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-08-05T13:32:40.712Z",
+            "modified": "2024-08-05T13:32:40.712Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "4|8sJ1wpuXRLrSZR4Qfwf76QNge0suyrQ9zVnRs5we3cce7ef3"
+            }
+        }
+    ],
+    "settings": {
+        "headers": [
+            {
+                "name": "Accept",
+                "value": "application/json"
+            }
+        ],
+        "options": {
+            "baseUrl": "http://localhost:8000/"
+        }
+    },
+    "ref": "UzDAMI1qDLwjrI82mrzEih0DvherV1UVzp1aDioxw6Iu91WSjydOZRBu5gX6qXE9nBvoPNGpOFziCRWihGC1mw"
+}
