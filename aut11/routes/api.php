@@ -17,4 +17,5 @@ Route::middleware(['auth:sanctum', AdminMW::class])->group(function () {
 });
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+// Kijelentkezés útvonal
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
