@@ -17,7 +17,7 @@ class AuthController extends ApiController
 
         $user = User::where('email', $request->email)->first();
         if (!$user || !Hash::check($request->password, $user->password)) {
-            return $this->errorResponse('The provided credentials are not correct.');
+            return $this->errorResponse('The provided credentials are incorrect.');
         }
 
         $token = $user->createToken($user->role)->plainTextToken;
