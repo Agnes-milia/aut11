@@ -1,4 +1,4 @@
 # Sanctum autentikációval
-Admin és User felhasználói rétegekhez útvonal kapcsolása__
-Belépés ellenőrzése__
-A token segítségével lekérdezzük a felhasználókat.__
+Admin és User felhasználói rétegekhez útvonal kapcsolása  
+Belépés ellenőrzése  
+A token segítségével lekérdezzük a felhasználókat.
