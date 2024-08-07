@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "aut11",
     "collectionId": "2942ce02-b445-460f-84cd-c9ac3c863e43",
-    "dateExported": "2024-08-05T13:52:33.525Z",
+    "dateExported": "2024-08-07T13:28:18.006Z",
     "version": "1.2",
     "folders": [],
     "requests": [
@@ -10,12 +10,12 @@
             "_id": "344737d6-0419-4db8-bbd3-ca42c903cf02",
             "colId": "2942ce02-b445-460f-84cd-c9ac3c863e43",
             "containerId": "",
-            "name": "loginpost admin",
+            "name": "get users by admin",
             "url": "api/admin",
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-08-01T20:52:58.118Z",
-            "modified": "2024-08-05T13:33:02.607Z",
+            "modified": "2024-08-07T13:26:12.808Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -24,7 +24,7 @@
             ],
             "auth": {
                 "type": "bearer",
-                "bearer": "4|8sJ1wpuXRLrSZR4Qfwf76QNge0suyrQ9zVnRs5we3cce7ef3"
+                "bearer": "8|RUDLzW0A1vOKhPsHL4KBbv2lNNCDc5eqwAM0S6vv91938aaf"
             }
         },
         {
@@ -60,12 +60,12 @@
             "_id": "cebce5e1-d8bb-459e-8c20-e78270419dbe",
             "colId": "2942ce02-b445-460f-84cd-c9ac3c863e43",
             "containerId": "",
-            "name": "loginpost user",
+            "name": "get users",
             "url": "api/user",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-08-05T13:32:40.712Z",
-            "modified": "2024-08-05T13:32:40.712Z",
+            "modified": "2024-08-07T13:25:57.873Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -74,7 +74,28 @@
             ],
             "auth": {
                 "type": "bearer",
-                "bearer": "4|8sJ1wpuXRLrSZR4Qfwf76QNge0suyrQ9zVnRs5we3cce7ef3"
+                "bearer": "8|RUDLzW0AhPsHL4KBbv2lNNCDc5eqwAM0S6vv91938aaf"
+            }
+        },
+        {
+            "_id": "b97408cf-c9f2-41d8-959d-42bc3ac15785",
+            "colId": "2942ce02-b445-460f-84cd-c9ac3c863e43",
+            "containerId": "",
+            "name": "logoutuser",
+            "url": "api/logout",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-08-05T13:55:23.464Z",
+            "modified": "2024-08-07T13:26:30.950Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "8|RUDLzW0A1vOKhPsHL4KBbv2lNNCDc5eqwAM0S6vv91938aaf"
             }
         }
     ],
@@ -89,5 +110,5 @@
             "baseUrl": "http://localhost:8000/"
         }
     },
-    "ref": "UzDAMI1qDLwjrI82mrzEih0DvherV1UVzp1aDioxw6Iu91WSjydOZRBu5gX6qXE9nBvoPNGpOFziCRWihGC1mw"
+    "ref": "UzDAMI1qDLwjrI82mrzEih-sc0dvtdl8PJBhA0I8yKhHr_bo-b9a9e4D1LbVZUzX9vNON-iZh1g_gQUfM1-9Yw"
 }
