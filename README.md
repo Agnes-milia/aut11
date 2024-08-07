@@ -3,7 +3,7 @@ Admin és User felhasználói rétegekhez útvonal/csoportos útvonal kapcsolás
 Belépés és kilépés tesztelése  
 A token segítségével lekérdezzük a felhasználókat (user és admin útvonalak).  
 
-## Lépések (alap projekt esetében; most a klónozás után csak a 8. lépéstől szükséges a végrehajtás):
+## Lépések (alap projekt esetében; most a klónozás után csak a 9. lépéstől szükséges a végrehajtás):
 1. Terminálba írjuk be (Sanctum installálása):  
 php artisan install:api  
 2. A Model fájlban use HasApiTokens beállítása
@@ -11,9 +11,11 @@ php artisan install:api
 4. DatabaseSeeders.php-ben adatok létrehozása (itt egy admin és egy user van létrehozva)
 5. Az ApiController fájlban alap sikeres és sikertelen esetek kezelése függvényekkel
 6. Az AuthController (őse a fenti ApiController osztály) fájlban belépéskor email, jelszó ellenőrzése után genráltatunk egy tokent, kilépéskor töröljük a megadott tokent.
-7. Admin MiddleWare megírása (itt AdminMW osztály)  
-8. php artisan db:seed vagy php artisan migrate:fresh --seed utasítás futtatásával az adatbázisba is bekerülnek az adatok (utóbbi minden egyebet is frissít az adatbázisban).
-9. Tesztelés Thunder Clientben a json kiterjesztésű fájl importálásával is lehetséges.
-10. Először lépjünk be valamelyik felhasználó adataival (password: abc123),  
-11. majd az eredményül kapott token segítségével (Auth/Bearer) tesztelhetjük a user illetve az admin útvonalat is.
-12. Kilépésnél is adjuk meg a tokent!
+7. Admin MiddleWare megírása (itt AdminMW osztály)
+8. Útvonalak írása  
+9. php artisan db:seed vagy php artisan migrate:fresh --seed utasítás futtatásával az adatbázisba is bekerülnek az adatok (utóbbi minden egyebet is frissít az adatbázisban).
+10. Tesztelés Thunder Clientben a json kiterjesztésű fájl importálásával is lehetséges.
+11. Beállítás: Header/Accept: application/json  
+12. Először lépjünk be valamelyik felhasználó adataival (password: abc123),  
+13. majd az eredményül kapott token segítségével (Auth/Bearer) tesztelhetjük a user illetve az admin útvonalat is.
+14. Kilépésnél is adjuk meg a tokent!
