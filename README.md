@@ -3,7 +3,7 @@ Admin és User felhasználói rétegekhez útvonal kapcsolása
 Belépés és kilépés ellenőrzése  
 A token segítségével lekérdezzük a felhasználókat.  
 
-## Lépések (alap projekt esetében; most a klónozás után csak az 5. lépés szükséges):
+## Lépések (alap projekt esetében; most a klónozás után csak az 5. lépéstől szükséges):
 1. Terminálba írjuk be (Sanctum installálása):  
 php artisan install:api  
 2. A Model fájlban use HasApiTokens beállítása
