@@ -27,6 +27,6 @@ class AuthController extends ApiController
     {
         $request->user()->currentAccessToken()->delete();
 
-        return response()->json(['message' => 'Kijelentkezés sikeres'], 200);
+        return response()->json(['message' => 'Successful logout.'], 200);
     }
 }
