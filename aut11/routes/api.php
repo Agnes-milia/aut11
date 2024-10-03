@@ -14,7 +14,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
         return $request->user();
     });
     // Kijelentkezés útvonal
-    Route::post('/logout', [AuthController::class, 'logout']);
+    Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
 });
 
 //admin végpontok
@@ -24,8 +24,6 @@ Route::middleware(['auth:sanctum', AdminMW::class])->group(function () {
 
 //bárki által hozzáférhető útvonal
 //Route::post('/login', [AuthController::class, 'login'])->name('login');
-
-
 Route::post('/register', [RegisteredUserController::class, 'store']);
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
-Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware('auth:sanctum');
+
