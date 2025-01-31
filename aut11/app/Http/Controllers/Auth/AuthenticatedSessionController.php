@@ -27,12 +27,13 @@ class AuthenticatedSessionController extends Controller
         $user = Auth::user();
         $token = $user->createToken('auth_token')->plainTextToken;
 
-        return response()->json([
+        /* return response()->json([
             'access_token' => $token,
             'token_type' => 'Bearer',
             'user' => $user,
             'status' => 'Login successful',
-        ]);
+        ]); */
+        return response()->noContent();
     }
     /**
      * Destroy an authenticated session.

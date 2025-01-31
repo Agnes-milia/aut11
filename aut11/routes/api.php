@@ -10,16 +10,15 @@ use Illuminate\Support\Facades\Route;
 
 //autentikált végpontok
 Route::middleware(['auth:sanctum'])->group(function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
+    Route::get('/profile', [UserController::class, 'show2']);
     // Kijelentkezés útvonal
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
 });
 
 //admin végpontok
 Route::middleware(['auth:sanctum', AdminMW::class])->group(function () {
-    Route::get('/admin/users', [UserController::class, 'index']);
+    Route::get('/users', [UserController::class, 'index']);
+    Route::get('/users/{id}', [UserController::class, 'show']);
 });
 
 //bárki által hozzáférhető útvonal
