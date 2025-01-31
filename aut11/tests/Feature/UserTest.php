@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-@var use App\Models\User;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -22,7 +22,7 @@ class UserTest extends TestCase
     public function test_users_auth() : void {
             //$this->withoutExceptionHandling(); 
             // create rögzíti az adatbázisban a felh-t
-            $admin = User::factory()->create([
+            $admin = User::factory()->make([
                 'role' => 0,
             ]);
             $response = $this->actingAs($admin)->get('/api/users/'.$admin->id);
