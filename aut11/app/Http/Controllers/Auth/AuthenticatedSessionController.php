@@ -24,8 +24,8 @@ class AuthenticatedSessionController extends Controller
             return response()->json(['message' => 'Invalid login credentials'], 401);
         }
 
-        $user = Auth::user();
-        $token = $user->createToken('auth_token')->plainTextToken;
+        /* $user = Auth::user();
+        $token = $user->createToken('auth_token')->plainTextToken; */
 
         /* return response()->json([
             'access_token' => $token,
@@ -40,8 +40,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request)
     {
-        $request->user()->currentAccessToken()->delete();
+        Auth::guard("web")->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return response()->noContent();
+        /* $request->user()->currentAccessToken()->delete();
 
-        return response()->json(['message' => 'Logout successful']);
+        return response()->json(['message' => 'Logout successful']); */
     }
 }
