@@ -22,9 +22,10 @@ class UserTest extends TestCase
     public function test_users_auth() : void {
             //$this->withoutExceptionHandling(); 
             // create rögzíti az adatbázisban a felh-t
-            $admin = User::factory()->make([
+            $admin = User::factory()->create([
                 'role' => 0,
             ]);
+            
             $response = $this->actingAs($admin)->get('/api/users/'.$admin->id);
             $response->assertStatus(200);
         }

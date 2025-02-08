@@ -24,8 +24,8 @@ class AuthenticatedSessionController extends Controller
             return response()->json(['message' => 'Invalid login credentials'], 401);
         }
 
-        $user = Auth::user();
-        $token = $user->createToken('auth_token')->plainTextToken;
+        /* $user = Auth::user();
+        $token = $user->createToken('auth_token')->plainTextToken; */
 
         /* return response()->json([
             'access_token' => $token,
