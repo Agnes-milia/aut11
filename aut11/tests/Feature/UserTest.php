@@ -25,7 +25,6 @@ class UserTest extends TestCase
             $admin = User::factory()->create([
                 'role' => 0,
             ]);
-            
             $response = $this->actingAs($admin)->get('/api/users/'.$admin->id);
             $response->assertStatus(200);
         }
