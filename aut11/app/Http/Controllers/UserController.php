@@ -17,9 +17,31 @@ class UserController extends Controller
         return User::find($id);
     }
 
-    public function show2()
+    public function show_auth()
     {
         $user = Auth::user();
         return User::find($user->id);
+    }
+
+    public function store(Request $request)
+    {
+        $user = new User();
+        $user->fill($request->all());
+        $user->save();
+        return response()->json($user, 201);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $user = User::find($id);
+        $user->fill($request->all());
+        $user->save();
+        return response()->json($user, 200);
+    }
+
+    public function destroy($id)
+    {
+        $user = User::find($id)->delete();
+        return response()->json(null, 200);
     }
 }
